@@ -127,6 +127,14 @@ a {
   transform: translateY(2px);
 }
 
+.topbar__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -204,9 +212,36 @@ a {
 .nav a:hover,
 .nav a:focus-visible,
 .pixel-button:hover,
-.pixel-button:focus-visible {
+.pixel-button:focus-visible,
+.lang-switch__button:hover,
+.lang-switch__button:focus-visible {
   transform: translate(-2px, -2px);
   outline: none;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.lang-switch__button {
+  padding: 10px 12px;
+  border: 0;
+  cursor: pointer;
+  color: var(--text);
+  background: var(--panel-deep);
+  box-shadow: 0 0 0 3px #0c0914, 0 0 0 5px rgba(83, 65, 126, 0.95);
+  font-family: var(--pixel-font);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.lang-switch__button.is-active {
+  color: #140f20;
+  background: linear-gradient(180deg, #79e5ff, var(--blue));
+  box-shadow: 0 0 0 3px #0c0914, 0 0 0 6px #b7f2ff;
 }
 
 .hero-grid {
@@ -331,6 +366,12 @@ a {
   color: var(--text);
 }
 
+.mini-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .status-pill {
   padding: 8px 12px;
   background: rgba(142, 255, 130, 0.15);
@@ -443,6 +484,39 @@ a {
   margin-bottom: 24px;
 }
 
+.section-subgroup + .section-subgroup {
+  margin-top: 34px;
+}
+
+.subgroup-head {
+  margin-bottom: 18px;
+}
+
+.subgroup-label {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-family: var(--pixel-font);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subgroup-head h3 {
+  margin: 0;
+  color: var(--gold);
+  font-family: var(--pixel-font);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subgroup-head p {
+  margin: 10px 0 0;
+  max-width: 56ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .section-head h2 {
   color: var(--gold);
   font-size: clamp(1.9rem, 5vw, 3.15rem);
@@ -455,7 +529,7 @@ a {
 
 .missions-grid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -496,25 +570,24 @@ a {
 }
 
 .mission-card--feature {
-  grid-column: span 7;
+  grid-column: 1 / -1;
   background:
     linear-gradient(160deg, rgba(95, 215, 255, 0.1), transparent 35%),
     linear-gradient(320deg, rgba(255, 94, 168, 0.1), transparent 32%),
     var(--panel-soft);
 }
 
-.mission-card:nth-child(2),
-.mission-card:nth-child(3) {
-  grid-column: span 5;
+.mission-card--wide {
+  grid-column: 1 / -1;
 }
 
-.mission-card:nth-child(4),
-.mission-card:nth-child(5) {
-  grid-column: span 3;
+.mission-card--archive {
+  background:
+    linear-gradient(180deg, rgba(255, 212, 94, 0.08), transparent 26%),
+    var(--panel-soft);
 }
 
 .mission-card--dark {
-  grid-column: span 6;
   background:
     linear-gradient(180deg, rgba(8, 15, 32, 0.5), transparent 28%),
     #19142a;
@@ -697,22 +770,12 @@ a {
   .hero-grid,
   .stack-panel,
   .contact-grid,
-  .lab-row,
   .focus-grid {
     grid-template-columns: 1fr;
   }
 
   .missions-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .mission-card--feature,
-  .mission-card:nth-child(2),
-  .mission-card:nth-child(3),
-  .mission-card:nth-child(4),
-  .mission-card:nth-child(5),
-  .mission-card--dark {
-    grid-column: span 6;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -727,6 +790,19 @@ a {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
+  }
+
+  .topbar__right {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .lang-switch {
+    width: 100%;
+  }
+
+  .lang-switch__button {
+    flex: 1 1 0;
   }
 
   .section-head {
@@ -772,15 +848,6 @@ a {
 
   .missions-grid {
     grid-template-columns: 1fr;
-  }
-
-  .mission-card--feature,
-  .mission-card:nth-child(2),
-  .mission-card:nth-child(3),
-  .mission-card:nth-child(4),
-  .mission-card:nth-child(5),
-  .mission-card--dark {
-    grid-column: auto;
   }
 
   .hero-card h1 {

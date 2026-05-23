@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Can Bilal Sipahi | Game Dev Portfolio</title>
     <meta
+      id="meta-description"
       name="description"
       content="Can Bilal Sipahi'nin oyun geliştirme, AI prototipleme ve Unity odaklı pixel-HUD estetiğindeki portfolyo sitesi."
     />
@@ -29,55 +30,66 @@
           <span class="brand__mark">CBS</span>
           <span class="brand__copy">
             <strong>Can Bilal Sipahi</strong>
-            <small>Unity Developer / AI Builder</small>
+            <small data-i18n="brandRole">Unity Developer / AI Builder</small>
           </span>
         </a>
 
-        <nav class="nav" aria-label="Ana menü">
-          <a href="#projects">Projeler</a>
-          <a href="#journey">Timeline</a>
-          <a href="#focus">Odak</a>
-          <a href="#contact">İletişim</a>
-        </nav>
+        <div class="topbar__right">
+          <nav class="nav" aria-label="Ana menü">
+            <a href="#projects" data-i18n="navProjects">Projeler</a>
+            <a href="#journey" data-i18n="navTimeline">Timeline</a>
+            <a href="#focus" data-i18n="navFocus">Odak</a>
+            <a href="#contact" data-i18n="navContact">İletişim</a>
+          </nav>
+
+          <div class="lang-switch" aria-label="Dil seçimi">
+            <button class="lang-switch__button is-active" data-lang-button="tr" type="button">
+              TR
+            </button>
+            <button class="lang-switch__button" data-lang-button="en" type="button">EN</button>
+          </div>
+        </div>
       </header>
 
       <section class="hero-grid">
         <article class="pixel-panel hero-card" data-reveal>
-          <p class="section-label">Player One / Portfolio</p>
-          <h1>Oyun geliştirme ile AI denemelerini aynı ekranda kuruyorum.</h1>
-          <p class="hero-copy">
-            Ben <strong>Can Bilal Sipahi</strong>. Unity ile oynanış prototipleri,
-            Python ile AI araçları ve gerçek problemi çözen yazılım sistemleri
-            geliştiriyorum. Bu sayfada itch.io oyunlarımı, CV'mdeki projeleri ve
-            GitHub üretim çizgimi daha oyun hissi taşıyan bir arayüzle topladım.
+          <p class="section-label" data-i18n="heroLabel">Player One / Portfolio</p>
+          <h1 data-i18n="heroTitle">Portfolyom</h1>
+          <p class="hero-copy" data-i18n-html="heroCopy">
+            Ben <strong>Can Bilal Sipahi</strong>. Unity ile oynanış prototipleri, Python ile
+            AI araçları ve gerçek problemi çözen yazılım sistemleri geliştiriyorum. Bu sayfada
+            itch.io oyunlarımı, CV'mdeki projeleri ve GitHub üretim çizgimi daha oyun hissi
+            taşıyan bir arayüzle topladım.
           </p>
 
           <div class="hero-actions">
-            <a class="pixel-button pixel-button--primary" href="#projects">
+            <a class="pixel-button pixel-button--primary" href="#projects" data-i18n="heroPrimaryCta">
               Projeleri aç
             </a>
             <a
               class="pixel-button pixel-button--secondary"
               href="assets/cv/can-bilal-sipahi-cv.pdf"
               download
+              data-i18n="heroSecondaryCta"
             >
               CV indir
             </a>
           </div>
 
           <ul class="hero-tags" aria-label="Kısa bilgiler">
-            <li>Unity prototipleri</li>
-            <li>itch.io yayınları</li>
-            <li>AI ve veri odaklı projeler</li>
+            <li data-i18n="heroTagOne">Unity prototipleri</li>
+            <li data-i18n="heroTagTwo">itch.io yayınları</li>
+            <li data-i18n="heroTagThree">AI ve veri odaklı projeler</li>
           </ul>
         </article>
 
         <aside class="pixel-panel hud-panel" data-reveal aria-label="Oyuncu durumu">
           <div class="hud-panel__top">
-            <h2>Oyuncu Bilgisi</h2>
-            <span class="status-pill">Active Build</span>
+            <h2 data-i18n="playerInfo">Oyuncu Bilgisi</h2>
+            <span class="status-pill" data-i18n="activeBuild">Active Build</span>
           </div>
 
+          <p class="mini-copy" data-i18n="energyLabel">Enerji seviyesi</p>
           <div class="energy-strip" aria-label="Enerji seviyesi">
             <span></span>
             <span></span>
@@ -88,7 +100,7 @@
 
           <div class="stat-block">
             <div class="stat-line">
-              <span>Unity Gameplay</span>
+              <span data-i18n="unityGameplay">Unity Gameplay</span>
               <strong>88%</strong>
             </div>
             <div class="pixel-meter"><i style="width: 88%"></i></div>
@@ -96,7 +108,7 @@
 
           <div class="stat-block">
             <div class="stat-line">
-              <span>Generative AI</span>
+              <span data-i18n="generativeAi">Generative AI</span>
               <strong>84%</strong>
             </div>
             <div class="pixel-meter pixel-meter--blue"><i style="width: 84%"></i></div>
@@ -104,17 +116,17 @@
 
           <div class="stat-block">
             <div class="stat-line">
-              <span>Problem Solving</span>
+              <span data-i18n="problemSolving">Problem Solving</span>
               <strong>80%</strong>
             </div>
             <div class="pixel-meter pixel-meter--gold"><i style="width: 80%"></i></div>
           </div>
 
           <div class="hud-chips">
-            <span>İstanbul / Avcılar</span>
-            <span>English B1</span>
-            <span>Staj / Junior</span>
-            <span>Unity + Python</span>
+            <span data-i18n="chipLocation">İstanbul / Avcılar</span>
+            <span data-i18n="chipLanguage">English B1</span>
+            <span data-i18n="chipTarget">Staj / Junior</span>
+            <span data-i18n="chipStack">Unity + Python</span>
           </div>
         </aside>
       </section>
@@ -144,175 +156,215 @@
 
       <section class="section-block pixel-panel" id="projects">
         <div class="section-head" data-reveal>
-          <p class="section-label">Mission Select</p>
-          <h2>Projeler</h2>
-          <p>
-            Oynanabilir oyun işleri, yayınlanmış ekip projeleri ve CV'den gelen
-            AI odaklı çalışmalar burada tek bir görev ekranı gibi listeleniyor.
-          </p>
+          <p class="section-label" data-i18n="projectsLabel">Mission Select</p>
+          <h2 data-i18n="projectsTitle">Projeler</h2>
         </div>
 
-        <div class="missions-grid">
-          <article class="mission-card mission-card--feature" data-reveal>
-            <div class="mission-card__meta">
-              <span>Applied AI</span>
-              <span>Product System</span>
-            </div>
-            <h3>AI-Powered Precision Agriculture &amp; Field Tracking System</h3>
-            <p>
-              Toprak görseli analizi, veri birleştirme ve GPS tabanlı saha takibini
-              aynı sistemde buluşturan gerçek dünya çözümü.
+        <div class="section-subgroup">
+          <div class="subgroup-head" data-reveal>
+            <p class="subgroup-label" data-i18n="gamesLabel">Game Track</p>
+            <h3 data-i18n="gamesTitle">Oyun Projeleri</h3>
+            <p data-i18n="gamesIntro">
+              itch.io ve jam tarafındaki yayınlanmış ya da oynanabilir oyun projelerim.
             </p>
-            <ul class="mission-list">
-              <li>Toprak tipini görüntüden yorumlayan modül geliştirildi.</li>
-              <li>Kullanıcı verisi ile eksiklik tespiti birleştirildi.</li>
-              <li>GPS ile traktör ve alan tarama takibi kuruldu.</li>
-            </ul>
-            <a href="https://github.com/Can-Bilal" target="_blank" rel="noreferrer">
-              GitHub profilini aç
-            </a>
-          </article>
+          </div>
 
-          <article class="mission-card" data-reveal>
-            <div class="mission-card__meta">
-              <span>Android</span>
-              <span>Action Prototype</span>
-            </div>
-            <h3>GalacticStriker</h3>
-            <p>
-              Tek elle oynanabilen, hızlı tempolu bir bullet-heaven denemesi.
-              Hayatta kalma döngüsü ve sci-fi yetenek hissine odaklanıyor.
-            </p>
-            <a
-              href="https://starters-pack.itch.io/galacticstriker"
-              target="_blank"
-              rel="noreferrer"
-            >
-              itch.io sayfası
-            </a>
-          </article>
+          <div class="missions-grid missions-grid--games">
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="g1MetaOne">Android</span>
+                <span data-i18n="g1MetaTwo">Action Prototype</span>
+              </div>
+              <h3>GalacticStriker</h3>
+              <p data-i18n="g1Desc">
+                Tek elle oynanabilen, hızlı tempolu bir bullet-heaven denemesi. Hayatta kalma
+                döngüsü ve sci-fi yetenek hissine odaklanıyor.
+              </p>
+              <a
+                href="https://starters-pack.itch.io/galacticstriker"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="viewOnItchio"
+              >
+                itch.io sayfası
+              </a>
+            </article>
 
-          <article class="mission-card" data-reveal>
-            <div class="mission-card__meta">
-              <span>Windows</span>
-              <span>Team Build</span>
-            </div>
-            <h3>Soul Knott</h3>
-            <p>
-              Takım halinde geliştirilen macera oyunu. Kısa sürede oynanabilir bir
-              build çıkarma ve ekip içi karar alma pratiği kazandırdı.
-            </p>
-            <a
-              href="https://starters-pack.itch.io/soul-knott"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oyun sayfası
-            </a>
-          </article>
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="g2MetaOne">Windows</span>
+                <span data-i18n="g2MetaTwo">Team Build</span>
+              </div>
+              <h3>Soul Knott</h3>
+              <p data-i18n="g2Desc">
+                Takım halinde geliştirilen macera oyunu. Kısa sürede oynanabilir bir build çıkarma
+                ve ekip içi karar alma pratiği kazandırdı.
+              </p>
+              <a
+                href="https://starters-pack.itch.io/soul-knott"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="openGamePage"
+              >
+                Oyun sayfası
+              </a>
+            </article>
 
-          <article class="mission-card" data-reveal>
-            <div class="mission-card__meta">
-              <span>Windows</span>
-              <span>Level Design</span>
-            </div>
-            <h3>Illusion Maze</h3>
-            <p>
-              Yayınlanmış ekip projesi. 3D level design akışı ve oynanabilir hissi
-              güçlendirme tarafında çalıştım.
-            </p>
-            <a
-              href="https://starters-pack.itch.io/illusion-maze"
-              target="_blank"
-              rel="noreferrer"
-            >
-              itch.io sayfası
-            </a>
-          </article>
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="g3MetaOne">Windows</span>
+                <span data-i18n="g3MetaTwo">Level Design</span>
+              </div>
+              <h3>Illusion Maze</h3>
+              <p data-i18n="g3Desc">
+                Yayınlanmış ekip projesi. 3D level design akışı ve oynanabilir hissi güçlendirme
+                tarafında çalıştım.
+              </p>
+              <a
+                href="https://starters-pack.itch.io/illusion-maze"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="viewOnItchio"
+              >
+                itch.io sayfası
+              </a>
+            </article>
 
-          <article class="mission-card" data-reveal>
-            <div class="mission-card__meta">
-              <span>Puzzle</span>
-              <span>School Project</span>
-            </div>
-            <h3>Kriptografi Oyunu</h3>
-            <p>
-              Kriptoloji temasını oynanabilir ve didaktik olmayan bir puzzle
-              deneyimine dönüştüren okul projesi.
-            </p>
-            <a
-              href="https://starters-pack.itch.io/kriptografi-game"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Projeyi aç
-            </a>
-          </article>
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="g4MetaOne">Puzzle</span>
+                <span data-i18n="g4MetaTwo">School Project</span>
+              </div>
+              <h3 data-i18n="g4Title">Kriptografi Oyunu</h3>
+              <p data-i18n="g4Desc">
+                Kriptoloji temasını oynanabilir ve didaktik olmayan bir puzzle deneyimine
+                dönüştüren okul projesi.
+              </p>
+              <a
+                href="https://starters-pack.itch.io/kriptografi-game"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="openProject"
+              >
+                Projeyi aç
+              </a>
+            </article>
 
-          <article class="mission-card mission-card--dark" data-reveal>
-            <div class="mission-card__meta">
-              <span>AI Tooling</span>
-              <span>Unity Research</span>
-            </div>
-            <h3>Unity Level Generator GAN</h3>
-            <p>
-              Unity için 2D level üretmeye odaklanan GAN deneyi. Procedural content
-              ile level design düşüncesini bir araya getiriyor.
-            </p>
-            <a
-              href="https://github.com/Can-Bilal/2d-level-design-ai-gan-"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Repo linki
-            </a>
-          </article>
+            <article class="mission-card mission-card--wide mission-card--archive" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="gamesArchiveMetaOne">Game Library</span>
+                <span data-i18n="gamesArchiveMetaTwo">itch.io</span>
+              </div>
+              <h3 data-i18n="gamesArchiveTitle">itch.io Arşivi</h3>
+              <p data-i18n="gamesArchiveDesc">
+                Tüm oyun prototiplerini ve yayınları tek akışta görmek için ana oyun sayfama
+                geçebilirsin.
+              </p>
+              <a href="https://starters-pack.itch.io/" target="_blank" rel="noreferrer" data-i18n="openArchive">
+                Starter's Pack sayfası
+              </a>
+            </article>
+          </div>
         </div>
 
-        <div class="lab-row" data-reveal>
-          <article class="lab-card">
-            <p class="section-label">Side Quest</p>
-            <h3>Anime AI</h3>
-            <p>
-              Anime tarzı görseller üreten, deneysel image-generation uygulaması.
+        <div class="section-subgroup">
+          <div class="subgroup-head" data-reveal>
+            <p class="subgroup-label" data-i18n="otherLabel">Other Track</p>
+            <h3 data-i18n="otherTitle">Diğer Projeler</h3>
+            <p data-i18n="otherIntro">
+              Oyun dışında çalıştığım AI, veri ve yazılım odaklı üretimler burada.
             </p>
-            <a href="https://github.com/Can-Bilal/images-ai" target="_blank" rel="noreferrer">
-              GitHub'da incele
-            </a>
-          </article>
+          </div>
 
-          <article class="lab-card">
-            <p class="section-label">Side Quest</p>
-            <h3>BorsaBot</h3>
-            <p>
-              Veri odaklı düşünme ve otomasyon yaklaşımını denediğim Python aracı.
-            </p>
-            <a href="https://github.com/Can-Bilal/borsabot" target="_blank" rel="noreferrer">
-              Repo'yu aç
-            </a>
-          </article>
+          <div class="missions-grid missions-grid--other">
+            <article class="mission-card mission-card--wide" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="o1MetaOne">Applied AI</span>
+                <span data-i18n="o1MetaTwo">Product System</span>
+              </div>
+              <h3 data-i18n="o1Title">Yapay Zeka Destekli Tarım ve Saha Takip Sistemi</h3>
+              <p data-i18n="o1Desc">
+                Toprak görseli analizi, veri birleştirme ve GPS tabanlı saha takibini aynı
+                sistemde buluşturan gerçek dünya çözümü.
+              </p>
+              <ul class="mission-list">
+                <li data-i18n="o1PointOne">Toprak tipini görüntüden yorumlayan modül geliştirildi.</li>
+                <li data-i18n="o1PointTwo">Kullanıcı verisi ile eksiklik tespiti birleştirildi.</li>
+                <li data-i18n="o1PointThree">GPS ile traktör ve alan tarama takibi kuruldu.</li>
+              </ul>
+              <a href="https://github.com/Can-Bilal" target="_blank" rel="noreferrer" data-i18n="openGithubProfile">
+                GitHub profilini aç
+              </a>
+            </article>
 
-          <article class="lab-card">
-            <p class="section-label">Game Library</p>
-            <h3>itch.io Arşivi</h3>
-            <p>
-              Tüm oyun prototiplerini ve yayınları tek akışta görmek için ana oyun
-              sayfama geçebilirsin.
-            </p>
-            <a href="https://starters-pack.itch.io/" target="_blank" rel="noreferrer">
-              Starter's Pack sayfası
-            </a>
-          </article>
+            <article class="mission-card mission-card--half mission-card--dark" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="o2MetaOne">AI Tooling</span>
+                <span data-i18n="o2MetaTwo">Unity Research</span>
+              </div>
+              <h3>Unity Level Generator GAN</h3>
+              <p data-i18n="o2Desc">
+                Unity için 2D level üretmeye odaklanan GAN deneyi. Procedural content ile level
+                design düşüncesini bir araya getiriyor.
+              </p>
+              <a
+                href="https://github.com/Can-Bilal/2d-level-design-ai-gan-"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="openRepo"
+              >
+                Repo linki
+              </a>
+            </article>
+
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="o3MetaOne">Image Generation</span>
+                <span data-i18n="o3MetaTwo">Experiment</span>
+              </div>
+              <h3>Anime AI</h3>
+              <p data-i18n="o3Desc">
+                Anime tarzı görseller üreten, deneysel image-generation uygulaması.
+              </p>
+              <a
+                href="https://github.com/Can-Bilal/images-ai"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="reviewOnGithub"
+              >
+                GitHub'da incele
+              </a>
+            </article>
+
+            <article class="mission-card mission-card--half" data-reveal>
+              <div class="mission-card__meta">
+                <span data-i18n="o4MetaOne">Market Data</span>
+                <span data-i18n="o4MetaTwo">Python Tool</span>
+              </div>
+              <h3>BorsaBot</h3>
+              <p data-i18n="o4Desc">
+                Veri odaklı düşünme ve otomasyon yaklaşımını denediğim Python aracı.
+              </p>
+              <a
+                href="https://github.com/Can-Bilal/borsabot"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="openRepo"
+              >
+                Repo linki
+              </a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section-block pixel-panel" id="journey">
         <div class="section-head" data-reveal>
-          <p class="section-label">Timeline</p>
-          <h2>Kısa zaman çizgisi</h2>
-          <p>
-            Bu bölüm korunarak daha oyun arayüzü havasına taşındı. Jam temposu,
-            AI deneyleri ve üniversite süreci aynı çizgide akıyor.
+          <p class="section-label" data-i18n="timelineLabel">Timeline</p>
+          <h2 data-i18n="timelineTitle">Kısa zaman çizgisi</h2>
+          <p data-i18n="timelineIntro">
+            Bu bölüm korunarak daha oyun arayüzü havasına taşındı. Jam temposu, AI deneyleri ve
+            üniversite süreci aynı çizgide akıyor.
           </p>
         </div>
 
@@ -320,10 +372,10 @@
           <article class="timeline-item">
             <span class="timeline-item__year">2026</span>
             <div>
-              <h3>Kriptografi Oyunu ve yeni itch.io yayınları</h3>
-              <p>
-                Puzzle eksenli bir kriptoloji oyunu çıkardım; aynı dönemde itch.io
-                prototip kütüphanemi daha görünür hale getirdim.
+              <h3 data-i18n="t1Title">Kriptografi Oyunu ve yeni itch.io yayınları</h3>
+              <p data-i18n="t1Desc">
+                Puzzle eksenli bir kriptoloji oyunu çıkardım; aynı dönemde itch.io prototip
+                kütüphanemi daha görünür hale getirdim.
               </p>
             </div>
           </article>
@@ -331,10 +383,10 @@
           <article class="timeline-item">
             <span class="timeline-item__year">2025+</span>
             <div>
-              <h3>AI deneyleri ve ürün odaklı yazılım</h3>
-              <p>
-                Generative AI, anime image generation, veri analizi ve saha takibi
-                gibi alanlarda deneysel projeler geliştirdim.
+              <h3 data-i18n="t2Title">AI deneyleri ve ürün odaklı yazılım</h3>
+              <p data-i18n="t2Desc">
+                Generative AI, anime image generation, veri analizi ve saha takibi gibi alanlarda
+                deneysel projeler geliştirdim.
               </p>
             </div>
           </article>
@@ -342,10 +394,10 @@
           <article class="timeline-item">
             <span class="timeline-item__year">2024</span>
             <div>
-              <h3>Takım oyunları ve jam ritmi</h3>
-              <p>
-                Soul Knott ve Illusion Maze ile yayınlanmış ekip işleri üretme ve
-                hızlı iterasyon içinde çalışma pratiği kazandım.
+              <h3 data-i18n="t3Title">Takım oyunları ve jam ritmi</h3>
+              <p data-i18n="t3Desc">
+                Soul Knott ve Illusion Maze ile yayınlanmış ekip işleri üretme ve hızlı iterasyon
+                içinde çalışma pratiği kazandım.
               </p>
             </div>
           </article>
@@ -353,11 +405,10 @@
           <article class="timeline-item">
             <span class="timeline-item__year">2023 - 2028</span>
             <div>
-              <h3>Trakya University</h3>
-              <p>
-                Information Systems and Technologies öğrencisiyim. Üniversite
-                sürecinde oyun geliştirme, AI ve yazılım projelerini birlikte
-                büyütüyorum.
+              <h3 data-i18n="t4Title">Trakya University</h3>
+              <p data-i18n="t4Desc">
+                Information Systems and Technologies öğrencisiyim. Üniversite sürecinde oyun
+                geliştirme, AI ve yazılım projelerini birlikte büyütüyorum.
               </p>
             </div>
           </article>
@@ -366,9 +417,9 @@
 
       <section class="section-block pixel-panel" id="focus">
         <div class="section-head" data-reveal>
-          <p class="section-label">Build Log</p>
-          <h2>Üretim odaklarım</h2>
-          <p>
+          <p class="section-label" data-i18n="focusLabel">Build Log</p>
+          <h2 data-i18n="focusTitle">Üretim odaklarım</h2>
+          <p data-i18n="focusIntro">
             Sadece araç değil, çalışma tarzımı da görünür kılan ana odak alanları.
           </p>
         </div>
@@ -376,25 +427,25 @@
         <div class="focus-grid">
           <article class="focus-card" data-reveal>
             <h3>Gameplay First</h3>
-            <p>
-              Önce hissi kuruyorum: akış, tempo, input tepkisi ve prototipin
-              oynanabilir olması benim için ilk eşik.
+            <p data-i18n="f1Desc">
+              Önce hissi kuruyorum: akış, tempo, input tepkisi ve prototipin oynanabilir olması
+              benim için ilk eşik.
             </p>
           </article>
 
           <article class="focus-card" data-reveal>
             <h3>AI as a Tool</h3>
-            <p>
-              Modelden çok çıktının ne işe yaradığıyla ilgileniyorum. AI tarafında
-              kullanıcının dokunabildiği araçlar kurmayı seviyorum.
+            <p data-i18n="f2Desc">
+              Modelden çok çıktının ne işe yaradığıyla ilgileniyorum. AI tarafında kullanıcının
+              dokunabildiği araçlar kurmayı seviyorum.
             </p>
           </article>
 
           <article class="focus-card" data-reveal>
             <h3>Problem to Product</h3>
-            <p>
-              Teknik çözümün ürün değerine dönüşmesini önemsiyorum: anlaşılır akış,
-              net çıktı ve gerçek kullanım hissi.
+            <p data-i18n="f3Desc">
+              Teknik çözümün ürün değerine dönüşmesini önemsiyorum: anlaşılır akış, net çıktı ve
+              gerçek kullanım hissi.
             </p>
           </article>
         </div>
@@ -415,13 +466,13 @@
           </div>
 
           <div class="soft-panel">
-            <p class="section-label">Soft Skills</p>
+            <p class="section-label" data-i18n="softSkillsLabel">Soft Skills</p>
             <ul>
-              <li>Analytical thinking</li>
-              <li>Problem solving</li>
-              <li>Willingness to learn</li>
-              <li>Teamwork</li>
-              <li>Communication skills</li>
+              <li data-i18n="softOne">Analytical thinking</li>
+              <li data-i18n="softTwo">Problem solving</li>
+              <li data-i18n="softThree">Willingness to learn</li>
+              <li data-i18n="softFour">Teamwork</li>
+              <li data-i18n="softFive">Communication skills</li>
             </ul>
           </div>
         </div>
@@ -429,17 +480,17 @@
 
       <section class="section-block pixel-panel section-block--contact" id="contact">
         <div class="section-head" data-reveal>
-          <p class="section-label">Co-op Invite</p>
-          <h2>İletişim</h2>
-          <p>
-            Oyun geliştirme, AI prototipleri veya staj/junior fırsatları için bana
-            doğrudan ulaşabilirsin.
+          <p class="section-label" data-i18n="contactLabel">Co-op Invite</p>
+          <h2 data-i18n="contactTitle">İletişim</h2>
+          <p data-i18n="contactIntro">
+            Oyun geliştirme, AI prototipleri veya staj/junior fırsatları için bana doğrudan
+            ulaşabilirsin.
           </p>
         </div>
 
         <div class="contact-grid" data-reveal>
           <article class="contact-card">
-            <strong>E-posta</strong>
+            <strong data-i18n="contactEmailLabel">E-posta</strong>
             <a href="mailto:sipahizbilal@gmail.com">sipahizbilal@gmail.com</a>
           </article>
           <article class="contact-card">
@@ -468,7 +519,9 @@
       </section>
 
       <footer class="pixel-panel footer-bar">
-        © <span data-year></span> Can Bilal Sipahi / Continue? Yes
+        <span data-i18n="footerPrefix">©</span>
+        <span data-year></span>
+        <span data-i18n="footerSuffix">Can Bilal Sipahi / Continue? Yes</span>
       </footer>
     </main>
   </body>
